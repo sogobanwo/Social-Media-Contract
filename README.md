@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+# Social Media Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Developed a decentralized social media platform where users can create and share content in the form of NFTs representing multimedia assets such as images, videos, and audio clips. The platform  incorporates advanced features such as user authentication, role-based access control (RBAC), and content moderation.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+The contract has been deployed and verified.
+use the url below to see the verified contract: 
+https://mumbai.polygonscan.com/address/0x551B6285fc8182f3E61A749C6FaED8451049a362
