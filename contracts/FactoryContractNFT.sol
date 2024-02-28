@@ -2,20 +2,22 @@
 pragma solidity ^0.8.0;
 
 import "./NFTContract.sol";
+import "./INFTContract.sol";
 
 
 contract FactoryContractNFT{
     SogoNFT[] public contracts ;
     SogoNFT public userContract;
+    mapping (address => address) nftContractAddress;
 
-    function createContract() external   returns (address){
+
+    function createContract() external{
          userContract = new SogoNFT(msg.sender);
-         address nftcontractaddress = address(userContract);
-         return nftcontractaddress;
+         nftContractAddress[msg.sender] = address(userContract);
     }
     
     function safeMint(address _to, string memory uri) public{
-       safeMint(_to, uri);
+       INFTContract(nftContractAddress[msg.sender]).safeMint(_to, uri);
     }
 
 }
